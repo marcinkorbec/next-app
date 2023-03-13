@@ -10,12 +10,3 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
-// module.exports = {
-//   reactStrictMode: true,
-//   exportPathMap: function () {
-//     return {
-//       '/about': { page: '/about' },
-//     }
-//   },
-//   trailingSlash: true, // <-- dodaj trailingSlash
-// }
