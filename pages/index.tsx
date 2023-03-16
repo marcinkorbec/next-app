@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.description}>
-          <p>
+          <p className="text-5xl mt-5">
             Marcin Marcin yyy &nbsp;
             <code className={styles.code}>pages/index.tsx</code>
           </p>
