@@ -1,15 +1,17 @@
 interface Props {
-  description: string;
-  thumbnailUrl: string;
-  thumbnailAlt: string;
+  data: {
+    description: string;
+    thumbnailUrl: string;
+    thumbnailAlt: string;
+  }
 }
 
-export const Main = ({description, thumbnailAlt, thumbnailUrl }:Props) => {
-  console.log(description)
+export const Main = ({data}: Props) => {
+  console.log()
   return (
     <main className="flex-grow bg-amber-50 grid sm:grid-cols-2">
-      <img src={thumbnailUrl} alt={thumbnailAlt}/>
-      <p className="p-10">{description}</p>
+      <img src={data.thumbnailUrl} alt={data.thumbnailAlt}/>
+      <p className="p-10">{data.description}</p>
     </main>
   )
 }

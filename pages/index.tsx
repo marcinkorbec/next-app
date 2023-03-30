@@ -23,9 +23,7 @@ export default function Home() {
     <div className="container mx-auto flex flex-col min-h-screen bg-amber-300">
       <Header/>
       <Main
-        description={DATA.description}
-        thumbnailUrl={DATA.thumbnailUrl}
-        thumbnailAlt={DATA.thumbnailAlt}
+        data={DATA}
       />
       <Footer/>
     </div>)
