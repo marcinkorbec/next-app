@@ -25,7 +25,7 @@ export default function Home() {
       <Main
         description={DATA.description}
         thumbnailUrl={DATA.thumbnailUrl}
-        thumnailAlt={DATA.thumbnailAlt}
+        thumbnailAlt={DATA.thumbnailAlt}
       />
       <Footer/>
     </div>)
