@@ -9,12 +9,15 @@ const links = [
 export const Header = () => {
   const [selected, setSelected] = useState("");
 
+  console.log(selected)
   useEffect(() => {
     const path = window.location.pathname;
+    console.log(path)
     setSelected(path);
-  }, [selected])
+  }, [])
 
   const mappedLinks = () => {
+    console.log()
     return links.map(({ href, label }) => (
       <>
         <Link key={href} href={href} passHref>
@@ -32,11 +35,6 @@ export const Header = () => {
       <nav className="bg-amber-600 py-1 px-2 text-white">
         {mappedLinks()}
       </nav>
-      <style jsx>{`
-        .active {
-          color: red;
-        }
-      `}</style>
     </header>
   );
 };
