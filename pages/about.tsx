@@ -1,21 +1,17 @@
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
+import {Container} from "@/components/Container";
+import {Main} from "@/components/Main";
 
-interface Props {
-
-}
 
 const AboutPage = ({}) => {
   return (
-    <>
-      <div className="container mx-auto flex flex-col min-h-screen bg-amber-100">
-        <Header/>
-        <div>Cześć Marcinku!</div>
-        <Footer/>
-      </div>
-    </>
-
+    <Container>
+      <Header/>
+      <Main>Cześć Marcinku!</Main>
+      <Footer/>
+    </Container>
   )
 }
 

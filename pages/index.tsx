@@ -2,6 +2,8 @@ import {Inter} from 'next/font/google'
 import {Footer} from "@/components/Footer";
 import {Main} from "@/components/Main";
 import {Header} from "@/components/Header";
+import {Product} from "@/components/Product";
+import {Container} from "@/components/Container";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -20,11 +22,11 @@ sprawdzamy, dlaczego ten kultowy, nowoczesny motocykl jest tak lubiany oraz jaki
 
 export default function Home() {
   return (
-    <div className="container mx-auto flex flex-col min-h-screen bg-amber-300">
+    <Container>
       <Header/>
-      <Main
-        data={DATA}
-      />
+      <Main>
+        <Product data={DATA}/>
+      </Main>
       <Footer/>
-    </div>)
+    </Container>)
 }
