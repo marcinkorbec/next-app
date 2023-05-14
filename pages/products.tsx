@@ -1,4 +1,4 @@
-0import { InferGetStaticPropsType } from "next";
+import {InferGetStaticPropsType} from "next";
 
 export interface ProductApiResponse {
   id: number;
@@ -16,6 +16,7 @@ export interface ProductApiResponse {
 export const getStaticProps = async () => {
   const res = await fetch(`https://fakestoreapi.com/products`);
   const data: ProductApiResponse[] = await res.json()
+  console.log(data)
 
   return {
     props: {
@@ -25,7 +26,13 @@ export const getStaticProps = async () => {
 };
 
 const ProductPage = ({data}: InferGetStaticPropsType<typeof getStaticProps>) => {
-  return <div>{data[0].title}</div>;
+  return (
+    <ul>
+        {
+          data.map((item, index) => <li key={index}>{item.title}</li>)
+        }
+    </ul>
+  )
 }
 export default ProductPage;
 
