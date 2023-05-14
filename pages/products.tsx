@@ -1,3 +1,5 @@
+0import { InferGetStaticPropsType } from "next";
+
 export interface ProductApiResponse {
   id: number;
   title: string;
@@ -22,8 +24,8 @@ export const getStaticProps = async () => {
   }
 };
 
-const ProductPage = () => {
-  return <div>Siemka</div>;
+const ProductPage = ({data}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  return <div>{data[0].title}</div>;
 }
 export default ProductPage;
 
