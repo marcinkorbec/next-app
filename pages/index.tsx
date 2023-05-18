@@ -8,6 +8,7 @@ import {Container} from "@/components/Container";
 const inter = Inter({subsets: ['latin']})
 
 const DATA = {
+  title: 'Triumph Twin 900',
   description: `Napędzany najnowszej generacji silnikiem Bonneville o wysokim momencie obrotowym i poj. 900 cm³, zaktualizowanym
 na rok 2021, z jego unikatowym charakterem, wyróżniającym się brzmieniem, czystą customową stylistyką i
 łatwością prowadzenia sprawia, że jazda nim jest po prostu wciągająca. Speed Twin 900 ma genialny styl i jest
@@ -18,6 +19,7 @@ sprawdzamy, dlaczego ten kultowy, nowoczesny motocykl jest tak lubiany oraz jaki
   Quasi, sequi ut.`,
   thumbnailUrl: 'https://www.jednoslad.pl/wp-content/uploads/2021/02/Triumph-Speed-Twin.jpeg',
   thumbnailAlt: 'triumph twin speed',
+  rating: 4.2,
 }
 
 export default function Home() {
