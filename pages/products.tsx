@@ -17,7 +17,6 @@ export interface ProductApiResponse {
 export const getStaticProps = async () => {
   const res = await fetch(`https://fakestoreapi.com/products`);
   const data: ProductApiResponse[] = await res.json()
-  console.log(data)
 
   return {
     props: {
