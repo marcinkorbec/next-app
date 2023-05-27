@@ -2,7 +2,7 @@ import {Inter} from 'next/font/google'
 import {Footer} from "@/components/Footer";
 import {Main} from "@/components/Main";
 import {Header} from "@/components/Header";
-import {Product} from "@/components/Product";
+import {ProductListItem} from "@/components/ProductListItem";
 import {Container} from "@/components/Container";
 
 const inter = Inter({subsets: ['latin']})
@@ -27,7 +27,7 @@ export default function Home() {
     <Container>
       <Header/>
       <Main>
-        <Product data={DATA}/>
+        <ProductListItem data={DATA}/>
       </Main>
       <Footer/>
     </Container>)
