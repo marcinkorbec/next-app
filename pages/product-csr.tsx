@@ -1,4 +1,4 @@
-import {Product} from "@/components/Product";
+import {ProductListItem} from "@/components/ProductListItem";
 import {useQuery} from "react-query";
 
 export interface ProductApiResponse {
@@ -39,7 +39,7 @@ const ProductCSRPage = () => {
         data.map((product: ProductApiResponse) => {
           return (
             <li key={product.id} className='shadow-xl border-2'>
-              <Product data={{
+              <ProductListItem data={{
                 title: product.title,
                 description: product.description,
                 thumbnailUrl: product.image,
