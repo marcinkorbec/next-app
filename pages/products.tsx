@@ -1,5 +1,5 @@
 import {InferGetStaticPropsType} from "next";
-import {Product} from "@/components/Product";
+import {ProductListItem} from "@/components/ProductListItem";
 
 export interface ProductApiResponse {
   id: number;
@@ -32,12 +32,10 @@ const ProductPage = ({data}: InferGetStaticPropsType<typeof getStaticProps>) => 
           data.map((product) => {
             return (
               <li key={product.id} className='shadow-xl border-2'>
-                <Product data={{
+                <ProductListItem data={{
                   title: product.title,
-                  description: product.description,
                   thumbnailUrl: product.image,
                   thumbnailAlt: product.title,
-                  rating: product.rating.rate,
                 }}/>
               </li>
             );
