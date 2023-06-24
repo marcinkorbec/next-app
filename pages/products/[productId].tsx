@@ -1,7 +1,6 @@
 import {useRouter} from "next/router";
-import {InferGetStaticPropsType} from "next";
+import {GetStaticPropsContext, InferGetStaticPropsType} from "next";
 import {ProductListItem} from "@/components/ProductListItem";
-import {InferGetStaticPaths} from "@types/next";
 
 const ProductIdPage = ({data}: InferGetStaticPropsType<typeof getStaticProps>) => {
 
@@ -55,7 +54,7 @@ export interface ProductApiResponse {
   };
 }
 
-export const getStaticProps = async ({params}: InferGetStaticPaths<typeof getStaticPaths>) => {
+export const getStaticProps = async ({params}: GetStaticPropsContext<{productId: string}>) => {
 
   if (!params?.productId) {
     return {
