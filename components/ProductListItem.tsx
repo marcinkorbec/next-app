@@ -1,12 +1,13 @@
 interface ProductDetails {
+  id: number;
   title: string;
   thumbnailUrl: string;
-  // description: string;
+  description: string;
   thumbnailAlt: string;
-  // rating: number;
+  rating: number;
 }
 
-type ProductListItemType = Pick<ProductDetails, "title">
+type ProductListItemType = Pick<ProductDetails, "title" | "id">
 
 
 
