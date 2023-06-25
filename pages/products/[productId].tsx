@@ -18,7 +18,9 @@ const ProductIdPage = ({data}: InferGetStaticPropsType<typeof getStaticProps>) =
         description: data.description,
         thumbnailUrl: data.image,
         thumbnailAlt: data.title,
-        rating: data.rating.rate,
+        rating: {
+          rate: data.rating.rate,
+        },
       }}/>
     </div>
   )

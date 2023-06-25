@@ -45,7 +45,9 @@ const ProductCSRPage = () => {
                 description: product.description,
                 thumbnailUrl: product.image,
                 thumbnailAlt: product.title,
-                rating: product.rating.rate,
+                rating: {
+                  rate: product.rating.rate,
+                },
               }}/>
             </li>
           );

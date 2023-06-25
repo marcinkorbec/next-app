@@ -4,7 +4,6 @@ import {Main} from "@/components/Main";
 import {Header} from "@/components/Header";
 import {ProductListItem} from "@/components/ProductListItem";
 import {Container} from "@/components/Container";
-import {number} from "prop-types";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -21,7 +20,9 @@ sprawdzamy, dlaczego ten kultowy, nowoczesny motocykl jest tak lubiany oraz jaki
   Quasi, sequi ut.`,
   thumbnailUrl: 'https://www.jednoslad.pl/wp-content/uploads/2021/02/Triumph-Speed-Twin.jpeg',
   thumbnailAlt: 'triumph twin speed',
-  rating: { rate: 4.2},
+  rating: {
+    rate: 4.2,
+  },
 }
 
 export default function Home() {
