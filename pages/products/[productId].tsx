@@ -3,11 +3,11 @@ import {GetStaticPropsContext, InferGetStaticPropsType} from "next";
 import {ProductListItem} from "@/components/ProductListItem";
 
 const ProductIdPage = ({data}: InferGetStaticPropsType<typeof getStaticProps>) => {
-
+  const router = useRouter()
   if (!data) {
     return <div>Coś poszło nie tak...</div>
   }
-  const router = useRouter()
+
 
   console.log(router)
   return (
