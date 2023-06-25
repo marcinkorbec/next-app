@@ -13,11 +13,12 @@ const ProductIdPage = ({data}: InferGetStaticPropsType<typeof getStaticProps>) =
   return (
     <div>
       <ProductListItem data={{
+        id: data.id,
         title: data.title,
-        // description: data.description,
+        description: data.description,
         thumbnailUrl: data.image,
         thumbnailAlt: data.title,
-        // rating: data.rating.rate,
+        rating: data.rating.rate,
       }}/>
     </div>
   )

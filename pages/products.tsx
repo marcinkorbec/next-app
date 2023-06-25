@@ -37,6 +37,8 @@ const ProductPage = ({data}: InferGetStaticPropsType<typeof getStaticProps>) => 
                   title: product.title,
                   thumbnailUrl: product.image,
                   thumbnailAlt: product.title,
+                  description: product.description,
+                  rating: product.rating.rate,
                 }}/>
               </li>
             );
