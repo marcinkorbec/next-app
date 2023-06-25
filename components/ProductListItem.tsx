@@ -4,7 +4,7 @@ interface ProductDetails {
   thumbnailUrl: string;
   description: string;
   thumbnailAlt: string;
-  rating: number;
+  rating: { rate: number };
 }
 
 type ProductListItemType = Pick<ProductDetails, "title" | "id">
